@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aprovacao_integrada>
+  <requisicao>
+    <usuario>demo</usuario>
+    <token>3366</token>
+    <numeroDocumento>2222</numeroDocumento>
+    <valorTransacao>1000</valorTransacao>
+    <qtdeParcelas>1</qtdeParcelas>
+    <url-retorno>http://localhost:55231/Carrinho/Retorno</url-retorno>
+  </requisicao>
+</aprovacao_integrada>

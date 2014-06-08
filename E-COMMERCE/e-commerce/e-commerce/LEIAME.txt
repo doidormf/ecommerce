@@ -1,0 +1,2 @@
+Para executar o fonte do e-Commerce, é necessário baixar os projetos
+Uol.PagSeguro e VipWebUtils, todos estão no SourceSafe na pasta LIB 

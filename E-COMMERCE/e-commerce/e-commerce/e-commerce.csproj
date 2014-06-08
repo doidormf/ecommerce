@@ -1,0 +1,1507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABF0BE66-3A3E-4C67-B712-26230318A827}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>e_commerce</RootNamespace>
+    <AssemblyName>e-commerce</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <DocumentationFile>
+    </DocumentationFile>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <IncludeIisSettings>false</IncludeIisSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 6.7.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 6.7.4\Assemblies\v4.0\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.3.0.20105.1\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.1.0.20105.408\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ConfiguracaoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\WebConfigController.cs" />
+    <Compile Include="Areas\Admin\Models\Classes\cadusu.cs" />
+    <Compile Include="Areas\Admin\Models\Classes\ConfWebConfig.cs" />
+    <Compile Include="Areas\Admin\Models\ConfLocal.cs" />
+    <Compile Include="Areas\Admin\Models\Repository\AdminDao.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CarrinhoController.cs" />
+    <Compile Include="Controllers\ContatoController.cs" />
+    <Compile Include="Controllers\DetalhesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PedidosController.cs" />
+    <Compile Include="Controllers\ProdutosRelacionadosController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MecanismoBuscaCep\BuscaCepClass.cs" />
+    <Compile Include="Helpers\CalculoFrete.cs" />
+    <Compile Include="Helpers\CriptografarConexao.cs" />
+    <Compile Include="Helpers\GravarArquivo.cs" />
+    <Compile Include="Helpers\SetEmail.cs" />
+    <Compile Include="Models\acsusu.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\buscaelementoscontroleCategoria_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\buscaelementoscontrolegetAllCategorias_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\buscaelementoscontroleSelecionadoMenuLateral_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\buscaelementoscontroleSelecionadoMenu_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\buscaelementoscontrole_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\buscaprodutosCores_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\buscaprodutos_result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cadusu.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Classes\AccountModels.cs" />
+    <Compile Include="Models\Classes\Carrinho.cs" />
+    <Compile Include="Models\Classes\ClienteAuxiliar.cs" />
+    <Compile Include="Models\Classes\ConfPed.cs" />
+    <Compile Include="Models\Classes\Contato.cs" />
+    <Compile Include="Models\Classes\ControleCarrinho.cs" />
+    <Compile Include="Models\Classes\ecomm_clientes.cs" />
+    <Compile Include="Models\Classes\GetManutencaoPedido.cs" />
+    <Compile Include="Models\Classes\ProdSald.cs" />
+    <Compile Include="Models\Classes\ProdutosAuxiliar.cs" />
+    <Compile Include="Models\Classes\RecuperarSenha.cs" />
+    <Compile Include="Models\Classes\SetPedido.cs" />
+    <Compile Include="Models\Classes\SetPedidoFinalizar.cs" />
+    <Compile Include="Models\Classes\SetPedidoLocal.cs" />
+    <Compile Include="Models\Classes\SetUpdadePedidoSaida.cs" />
+    <Compile Include="Models\Classes\SP_GetPedido.cs" />
+    <Compile Include="Models\cliente_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\eComm_Atucli_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ecomm_clientes.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fatura.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\filial.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\getconfbdEcomm_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\movcart.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\movcupom.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\movfundo.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Parcelamentos_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pedcab.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pedclend.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\peddesti.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pedite.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pedpag.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prodsald.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Repositorios\ClientesDao.cs" />
+    <Compile Include="Models\Repositorios\ConfiguracoesDAO.cs" />
+    <Compile Include="Models\Classes\Cor.cs" />
+    <Compile Include="Models\Classes\Home.cs" />
+    <Compile Include="Models\Classes\Menu.cs" />
+    <Compile Include="Models\Classes\Produtos.cs" />
+    <Compile Include="Models\Classes\TabCores.cs" />
+    <Compile Include="Models\Classes\Tamanho.cs" />
+    <Compile Include="Models\GetConfiguracoesProvador_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Interfaces\ICores.cs" />
+    <Compile Include="Models\Modelvsaslite.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelvsaslite.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Repositorios\CoresRepositorio.cs" />
+    <Compile Include="Models\Repositorios\FilialDao.cs" />
+    <Compile Include="Models\Repositorios\PedidosDAO.cs" />
+    <Compile Include="Models\Repositorios\ProdutosDao.cs" />
+    <Compile Include="Models\Modelvsaslite.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Modelvsaslite.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelvsaslite.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_GetPedido_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_GetPeso_Result.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tabconf.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tabconfped.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tabcores.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tabparam.cs">
+      <DependentUpon>Modelvsaslite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\DefineCaminho.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Correios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceEndereco\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\aprovacao_integrada.xml" />
+    <Content Include="Areas\Admin\Views\Configuracao\Confirmacao.ascx" />
+    <Content Include="Areas\Admin\Views\Configuracao\Index.aspx" />
+    <Content Include="Areas\Admin\Views\Configuracao\SetConfLocal.aspx" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\Index.aspx" />
+    <Content Include="Areas\Admin\Views\Shared\LogOn.ascx" />
+    <Content Include="Areas\Admin\Views\WebConfig\Index.aspx" />
+    <Content Include="Areas\Content\StyleConfLocal.css" />
+    <Content Include="bin\gxcrypt.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="Content\base.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\layout\Azul\bootstrap_Azul.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\layout\Azul\stylejquery_Azul.css" />
+    <Content Include="Content\bottom.css" />
+    <Content Include="Content\layout\Cinza\bootstrap_Cinza.css" />
+    <Content Include="Content\layout\Cinza\Site_Cinza.css" />
+    <Content Include="Content\layout\Cinza\stylejquery_Cinza.css" />
+    <Content Include="Content\layout\jquery-ui.css" />
+    <Content Include="Content\layout\next.png" />
+    <Content Include="Content\layout\prev.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Imagens\Alto-verão 13\1.png" />
+    <Content Include="Imagens\Alto-verão 13\123456.jpg" />
+    <Content Include="Imagens\Alto-verão 13\2.png" />
+    <Content Include="Imagens\Alto-verão 13\2661_a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2661_b.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2661_c.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2661_d.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2661_e.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2663_a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2663_b.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2663_c.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2663_d.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2663_e.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2664_a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2664_b.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2664_c.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2664_d.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2664_e.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2668_1_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2668_2_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2668_3_0021.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2668_4_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2668_5_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2782_1_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2782_2_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2782_3_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2782_4_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2782_5_7876.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2850_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2850_2274.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2850_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2851_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2851_4789.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2851_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2852+2853_cja_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2852+2853_cjb_2274_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2852+2853_cjc_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2852_2853_cja_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2852_2853_cjb_2274_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2852_2853_cjc_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2853_cja_0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2853_cjb_2274_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2853_cjc_4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2854_0001-cjb_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2854_0001-cjc_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2854_2274-cjb_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2854_4372-cja_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2854_6101-cja_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2854_cjc_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2855_0001-cja_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2855_0106-cjb_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2855_2274-cjb_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2855_4372-cjc_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2855_6101-cjc_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2855_9010-cja_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2856_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2856_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2856_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2857_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2857_2274.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2857_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2858_0001+4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2858_0001_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2858_2274+0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2858_2274_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2858_4372+ 6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2858_4372_ 6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2862_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2862_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2862_7876.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2864_0106+ 0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2864_0106_ 0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2864_4647+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2864_4647_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2864_7876+ 0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2864_7876_ 0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865+2863_cja_0106_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865+2863_cjb_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865+2863_cjc_7876_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865_2863_cja_0106_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865_2863_cjb_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865_2863_cjc_7876_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865_cja_0106+ 0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865_cja_0106_ 0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865_cjb_4647+ 0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865_cjb_4647_ 0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865_cjc_7876+0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2865_cjc_7876_0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2867_cja_0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2867_cja_7876_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2867_cjb_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2867_cjb_4647_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2867_cjc_0106_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2867_cjc_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2868_cja_0106_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2868_cja_0106_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2868_cjb_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2868_cjb_4647_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2868_cjc_001+7876_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2868_cjc_001_7876_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2868_cjc_7876_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2869_0001+7876.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2869_0001_7876.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2869_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2869_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2870_0001+0106_a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2870_0001+0106_b.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2870_0001+7876_a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2870_0001+7876_b.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2870_0001_0106_a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2870_0001_0106_b.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2870_0001_7876_a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2870_0001_7876_b.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2870_4647_a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2870_4647_b.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2873-0001+4647_c.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2873-0001_4647_c.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2873_4372+7876.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2873_4372_7876.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2873_6101+0001a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2873_6101_0001a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2874_4372-NOVA.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2874_4647-NOVA.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2874_6101-NOVA.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2875_0001+4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2875_0001_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2875_6101+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2875_6101_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2875_7876+4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2875_7876_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2876_a_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2876_b_4647+9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2876_b_4647_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2876_c_6101+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2876_c_6101_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2877_cja_0001+6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2877_cja_0001_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2877_cja_6101+0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2877_cja_6101_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2877_cjb_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2877_cjb_4647_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2877_cjc_4372+0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2877_cjc_4372_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2877_cjc_4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2878_cja_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2878_cja_4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2878_cjb_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2878_cjb_9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2878_cjc_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2878_cjc_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2879_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2879_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2879_6101+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2879_6101_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2880_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2880_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2880_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2881_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2881_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2881_dourado.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2882_4372boneca.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2882_4647boneca.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2882_610boneca1.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2886_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2886_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2886_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2887_a_0001+6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2887_a_0001_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2887_b_4372+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2887_b_4372_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2887_c_4647+9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2887_c_4647_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2888_4372+001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2888_4372_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2888_6101+001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2888_6101_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2888_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2889_cja_4372+0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2889_cja_4372+0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2889_cja_4372_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2889_cja_4372_0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2889_cjb_6101+0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2889_cjb_6101+0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2889_cjb_6101_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2889_cjb_6101_0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2889_cjc_9010_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2889_cjc_9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2890_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2890_gold.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2891_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2891_gold.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2892_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2892_dourado.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2892_vermelho.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2896_001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2896_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2896_2274-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2896_2274.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2896_4647-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2896_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2897_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2897_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2897_4842.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2898_cja_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2898_cja_001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2898_cjb_2274+001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2898_cjb_2274+001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2898_cjb_2274_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2898_cjb_2274_001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2898_cjc_4647+001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2898_cjc_4647_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2898_cjc_4647_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2900_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2900_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2900_4842.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2901_gold.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2901_silver.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2902_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2902_0021.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2902_4842.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2911_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2911_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2911_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2911_7876.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2911_preto.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2912_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2912_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2912_2274.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2912_3336- 16-1434 pantone.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2912_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2913-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2913.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2914_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2914_2274.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2914_3341.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2914_4789.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2914_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2915_3336.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2915_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2915_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2915_7876.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2915_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2916_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2916_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2921_a_0001+6101+0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2921_a_0001_6101_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2921_b_4372+6101+0001+0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2921_b_4372_6101_0001_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2921_c_6042.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_a_0001+6101-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_a_0001+6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_a_0001_6101-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_a_0001_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_b_4372+6101+0001 +0020-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_b_4372+6101+0001 +0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_b_4372_6101_0001 _0020-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_b_4372_6101_0001 _0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_c_6042+0001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_c_6042+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_c_6042_0001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2922_c_6042_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2923_001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2923_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2923_6058-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2923_6058.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2923_6101-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2924_cja_0020_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2924_cja_0023_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2924_cjb_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2924_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2924_cjc_001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2924_cjc_6042_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2925_cja_001_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2925_cja_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2925_cja_0223_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2925_cjb_4372_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2925_cjb_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2925_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2925_cjc_6042_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2925_cjc_6042_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2925_cjc_6534_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2926_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2926_6042.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2930_a_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2930_b_0020+0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2930_b_0020_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2930_c_6101+4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2930_c_6101_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2931_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2931_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2931_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cja_6101+4372_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cja_6101+4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cja_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cja_6101_4372_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cja_6101_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjb_7955+6101_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjb_7955+6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjb_7955_0+6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjb_7955_0_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjb_7955_6101_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjb_7955_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjc_6534+0106_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjc_6534+0106_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjc_6534_0106_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjc_6534_0106_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2932_cjc_6534_0106_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2933_cja_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2933_cja_001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2933_cjb_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2933_cjb_4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2933_cjc_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2933_cjc_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2937_a_6101+4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2937_a_6101_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2937_b_7955+6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2937_b_7955_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2937_c_6534+0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2937_c_6534_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_a_0020+0001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_a_0020+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_a_0020_0001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_a_0020_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_b_6101+0001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_b_6101+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_b_6101_0001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_b_6101_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_c_7880+0001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_c_7880+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_c_7880_0001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2938_c_7880_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2939_0102.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2939_6534.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2939_7929.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2940_cja_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2940_cja_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2940_cjb_7880_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2940_cjb_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2940_cjc_0102_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2940_cjc_6532_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2941_cja_0020_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2941_cja_0020_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2941_cjb_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2941_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2941_cjc_7880_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2941_cjc_7880_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2942_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2942_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2942_8430.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2946_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2946_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2946_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2947_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2947_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2947_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2948_cja_0020_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2948_cja_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2948_cjb_0102_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2948_cjb_0106_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2948_cjc_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2948_cjc_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2949_cja+cjb+cjc_jeans_02-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2949_cja+cjb+cjc_jeans_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2949_cja_0020_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2949_cja_cjb_cjc_jeans_02-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2949_cja_cjb_cjc_jeans_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2949_cjb_0106_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2949_cjc_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2950_0102.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2950_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2955_4789.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2955_6058.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2955_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2956_cja_8430_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2956_cja_8430_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2956_cja_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2956_cjb_0071_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2956_cjb_0071_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2956_cjb_0071_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2956_cjc_6101_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2956_cjc_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2956_cjc_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cja_4789+6101+0001_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cja_4789+6101+0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cja_4789_6101_0001_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cja_4789_6101_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cja_6101_02-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cja_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjb_6058+6101+0001_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjb_6058+6101+0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjb_6058_6101_0001_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjb_6058_6101_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjb_8430_02-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjb_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjc_0102_02-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjc_0102_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjc_6101+0001_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjc_6101+0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjc_6101_0001_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2957_cjc_6101_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2958_cja_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2958_cja_0223_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2958_cjb_6058_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2958_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2958_cjc_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2958_cjc_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2959_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2959_8430.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2960_6222-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2960_6222.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2962_6222.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2963_6222-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2963_6222.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2965_a_0001+6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2965_a_0001_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2965_b_0020+4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2965_b_0020_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2965_c_4373+6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2965_c_4373_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2965_d_6042.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2965_e_7880+6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2965_e_7880_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2966_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2966_0001_Trat.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2966_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2966_0020_Trat.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2966_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2966_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2966_6101_Trat.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2967_001-GRANDE.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2967_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2967_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2967_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2967_6532.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2967_7954.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2968_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2968_0001_Trat.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2968_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2968_0020_Trat.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2968_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2968_4372_Trat.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2968_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2969_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2969_0071.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2969_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2969_7880.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2969_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2970_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2970_0001_Trat.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2970_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2970_0020_Trat.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2970_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2970_4372_Trat.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2970_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2971_a_0001+6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2971_a_0001_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2971_a_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2971_b_6101_01 %282%29.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2971_b_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2971_b_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2972_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2972_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2973_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2973_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2975_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2975_5449.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2975_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2976_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2976_5449.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2976_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2977_4647-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2977_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2977_5449-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2977_5449.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2977_9010-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2977_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2978_cja_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2978_cja_001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2978_cjb_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2978_cjb_4647_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2978_cjc_5449_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2978_cjc_5449_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2979_cja_4647_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2979_cja_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2979_cja_4647_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2979_cjb_5449_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2979_cjb_5449_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2979_cjb_5449_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2979_cjc_9010_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2979_cjc_9010_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2979_cjc_9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2980_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2980_5449+001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2980_5449_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2980_9010+001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2980_9010_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2981_8236.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2981_dourado.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2982_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2982_5449+0080.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2982_5449_0080.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2982_9010+0080.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2982_9010_0080.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2986_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2986_4361.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2986_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2987_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2987_2274.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2987_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2988_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2988_2274.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2988_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2989_cja_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2989_cja_4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2989_cjb_0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2989_cjb_4789_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2989_cjc_8430_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2989_cjc_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2990_cja_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2990_cja_4842_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2990_cjb_2274_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2990_cjb_8236_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2990_cjc_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2990_cjc_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2991_0021.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2991_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2991_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2992_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2992_4361.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2992_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2993_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2993_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2993_gold.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2994_001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2994_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2994_2274-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2994_2274.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2994_4372-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2994_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2998_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2998_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2998_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2999_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2999_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\2999_6101.jpg" />
+    <Content Include="Imagens\Alto-verão 13\3000_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3000_4647+9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3000_4647_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3000_6101+001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3000_6101_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3001_cja_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3001_cja_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3001_cjb_0021_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3001_cjb_4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3001_cjc_4647_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3001_cjc_9010_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3003_cja_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3003_cja_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3003_cjb_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3003_cjb_9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3003_cjc_001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3003_cjc_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3004_4372+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3004_4372_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3004_4647+9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3004_4647_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3004_6101+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3004_6101_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3005_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3005_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3005_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3006_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3006_gold.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3007_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3007_gold.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3012_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3012_6101+001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3012_6101_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3012_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3013_4647+9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3013_4647_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3013_4792.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3013_6101+001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3013_6101_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cja_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cja_6101+0001_03.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cja_6101_0001_03.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjb_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjb_4647+9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjb_4647+9010_03.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjb_4647_9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjb_4647_9010_03.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjb_4792_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjb_4792_03.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjc_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjc_6101+0001+4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjc_6101+0001+4372_02_.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjc_6101+0001+4372_02_Pequena.jpg" />
+    <Content Include="Imagens\Alto-verão 13\3014_cjc_6101_0001_4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3014_Pai.jpg" />
+    <Content Include="Imagens\Alto-verão 13\3015_cja_0106_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3015_cja_0106_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3015_cjb_6101+001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3015_cjb_6101_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3015_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3015_cjc_9010+001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3015_cjc_9010_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3015_cjc_9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3016_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3016_4792.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3016_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3017_4792.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3017_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3017_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3022_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3022_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3022_7876.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3023_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3023_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3023_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3024_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3024_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3024_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3025_cja_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3025_cja_4647_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3025_cja_4647_03.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3025_cjb_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3025_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3025_cjb_6101_03.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3025_cjc_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3025_cjc_0106_03.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3025_cjc_7876_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3026_cja+cjb_jeans-escuro_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3026_cja_0106_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3026_cja_cjb_jeans-escuro_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3026_cjb_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3026_cjb_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3026_cjb_jeans-claro_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3027_gold.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3027_silver.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3028_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3028_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3029.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3033_0021.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3033_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3034_0021+9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3034_0021_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3034_6101+001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3034_6101_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3035_cja_0021+9010_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3035_cja_0021+9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3035_cja_0021_9010_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3035_cja_0021_9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3035_cjb_6101+0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3035_cjb_6101+0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3035_cjb_6101_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3035_cjb_6101_0001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3036_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3036_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3037_001-alça.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3037_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3037_9010 a.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3037_9010-alça.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3038_0001_com coraçao.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3038_0001_sem coraçao.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3038_0021_com coraçao.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3038_0021_sem coraçao.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3040-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3040.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3043_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3043_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3043_6532.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3044_4372-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3044_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3044_6083-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3044_6083.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3044_6532-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3044_6532.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3045_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3045_0355.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cja_001_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cja_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cja_6101_02-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cja_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cjb_0020_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cjb_0020_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cjb_0106_02-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cjb_0106_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cjc_6042_02-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cjc_6042_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cjc_6476_01-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3046_cjc_6476_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3047_cja_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3047_cja_6042_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3047_cjb_0020+6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3047_cjb_0020_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3047_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3047_cjc_001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3047_cjc_6532_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3051_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3051_6651.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3051_7880.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3052_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3052_6651.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3052_7880.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3053_cja_0102_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3053_cja_7880_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3053_cjb_0020_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3053_cjb_6042_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3053_cjc_001+6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3053_cjc_001_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3053_cjc_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3054_cja_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3054_cja_8356_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3054_cjb_001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3054_cjb_6651_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3054_cjc_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3054_cjc_7880_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3055_azul.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3055_marinho.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3055_verde.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3060_6042.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3060_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3060_6532.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3061_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3061_6042.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3061_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3062_a_0355-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3062_a_0355.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3062_b_6101-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3062_b_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3062_c_7954-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3062_c_7954.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3063_cja_0102_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3063_cja_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3063_cjb_6042_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3063_cjb_6042_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3063_cjc_0020+9010_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3063_cjc_0020_9010_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3063_cjc_9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3064_cja_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3064_cja_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3064_cjb_8430_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3064_cjb_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3064_cjc_9010_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3064_cjc_9010_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3065_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3065_8430.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3065_9010.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_001+6534-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_001+6534.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_001_6534-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_001_6534.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_4372+8430-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_4372+8430.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_4372_8430-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_4372_8430.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_6101+8430-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_6101+8430.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_6101_8430-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3069_6101_8430.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3070_001+0106+6534.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3070_001_0106_6534.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3070_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3072_cja_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3072_cja_0106_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3072_cjb_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3072_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3072_cjc_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3072_cjc_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3073_cja+cjb+cjc_jeans_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3073_cja_0071_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3073_cja_cjb_cjc_jeans_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3073_cjb_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3073_cjc_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3075_0106.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3075_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3079_0071+001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3079_0071+001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3079_0071_001-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3079_0071_001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3079_4789+6101-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3079_4789+6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3079_4789_6101-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3079_4789_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3079_6101-costas.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3079_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3080_6042.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3080_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3080_8430.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3081_cja_0071+001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3081_cja_0071_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3081_cja_6042_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3081_cjb_4789_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3081_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3081_cjc_6101+0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3081_cjc_6101_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3081_cjc_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3082_cja_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3082_cja_0102_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3082_cjb_0379_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3082_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3082_cjc_6101+0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3082_cjc_6101_0001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3082_cjc_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3083_6042.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3083_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3090_cja_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3090_cja_4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3090_cjb_4647_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3090_cjb_4647_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3091_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3091_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3092_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3092_4647.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3093_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3093_4789.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3094_cja_001_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3094_cja_001_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3094_cjb_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3094_cjb_4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3095_cja_4789_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3095_cja_4789_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3095_cjb_6101-01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3095_cjb_6101-02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3096_4789.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3096_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3097_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3097_4789.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3098_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3098_4789.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3104_001+4372+6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3104_001_4372_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3104_6101+001+7880.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3104_6101_001_7880.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3105_a_6101+0001+4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3105_a_6101_0001_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3105_b_7880+0001+6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3105_b_7880_0001_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3106_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3106_7880.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3107.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3110_a_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3110_b_0020.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3111_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3111_6532.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3113_a_6101+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3113_a_6101_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3113_b_6532+6101+0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3113_b_6532_6101_0001.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3114_branco.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3114_marinho.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3118_cja_4372_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3118_cja_4372_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3118_cjb_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3118_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3119_cja_0020_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3119_cja_0020_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3119_cjb_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3119_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3120_4372.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3120_6101.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3121_cja_0020_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3121_cja_0020_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3121_cjb_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3121_cjb_6101_02 2.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3121_cjb_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3122_cja_6101_01 2.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3122_cja_6101_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3122_cja_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3122_cjb_8430_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3122_cjb_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3123_cja_6101+001+0020_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3123_cja_6101_001_0020_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3123_cja_6101_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3123_cjb_6476+001+8430_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3123_cjb_6476_001_8430_01.JPG" />
+    <Content Include="Imagens\Alto-verão 13\3123_cjb_8430_02.JPG" />
+    <Content Include="Imagens\Alto-verão 13\5440-0001.jpg" />
+    <Content Include="Imagens\Alto-verão 13\Pingente_Milon.JPG" />
+    <Content Include="Imagens\Alto-verão 13\sapatenis-masculino-olympikus-cairo-887-rato-5332d4.jpg" />
+    <Content Include="Imagens\Alto-verão 13\sapatilha-barbie-ref20972-infantil-261b86f0e1d5a3eee03b8d7af3a58d6f.jpg" />
+    <Content Include="Imagens\Alto-verão 13\sapatilha.jpg" />
+    <Content Include="Imagens\Alto-verão 13\vip.jpg" />
+    <Content Include="Imagens\Alto-verão 13\_DSC3322 copy.jpg" />
+    <Content Include="Imagens\Alto-verão 13\_DSC3326 copy.jpg" />
+    <Content Include="Imagens\Alto-verão 13\_DSC3328 copy.jpg" />
+    <Content Include="Imagens\Banner\1.jpg" />
+    <Content Include="Imagens\Banner\2.jpg" />
+    <Content Include="Imagens\Banner\3.jpg" />
+    <Content Include="Imagens\Template\ajax_loader.gif" />
+    <Content Include="Imagens\Template\Azul\logo.png" />
+    <Content Include="Imagens\Template\Azul\pay.gif" />
+    <Content Include="Imagens\Template\Cinza\adicionar.png" />
+    <Content Include="Imagens\Template\Cinza\btn_comprar.png" />
+    <Content Include="Imagens\Template\Cinza\carregando_.gif" />
+    <Content Include="Imagens\Template\Cinza\carrinho.png" />
+    <Content Include="Imagens\Template\Cinza\continuar.png" />
+    <Content Include="Imagens\Template\Cinza\finalizar.png" />
+    <Content Include="Imagens\Template\Cinza\logo.png" />
+    <Content Include="Imagens\Template\Cinza\pay.gif" />
+    <Content Include="Imagens\Template\Cinza\prosseguir.png" />
+    <Content Include="Imagens\Template\mail.png" />
+    <Content Include="Imagens\Template\phone.png" />
+    <Content Include="Imagens\Template\Azul\finalizar_.png" />
+    <Content Include="Imagens\Template\Azul\finalizar_1.png" />
+    <Content Include="Imagens\Template\bannerpagseguro.gif" />
+    <Content Include="Imagens\Template\calendario_16x16.png" />
+    <Content Include="Imagens\Template\Delete.png" />
+    <Content Include="Imagens\Template\logo_small.png" />
+    <Content Include="Imagens\Template\pay.gif" />
+    <Content Include="Imagens\Template\PayPal.png" />
+    <Content Include="Imagens\Template\Refresh16.png" />
+    <Content Include="Imagens\Template\semImagem.gif" />
+    <Content Include="Imagens\Template\ui-icons_222222_256x240.png" />
+    <Content Include="Imagens\Template\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Imagens\Template\ui-icons_454545_256x240.png" />
+    <Content Include="Imagens\Template\ui-icons_888888_256x240.png" />
+    <Content Include="Imagens\Template\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\buscaCep.js" />
+    <Content Include="Scripts\FuncoesTratamentoDados.js" />
+    <Content Include="Scripts\hoverIntent.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-ui-1.10.1.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.9.2.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Scripts\jquery.dropdown.js" />
+    <Content Include="Scripts\jquery.dropdownPlain.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\search.js" />
+    <Content Include="Scripts\validacoes.js" />
+    <Content Include="Imagens\Alto-verão 13\vssver.scc" />
+    <None Include="Properties\PublishProfiles\admteste2012.pubxml" />
+    <None Include="Properties\PublishProfiles\eventos.pubxml" />
+    <None Include="Properties\PublishProfiles\localhost.pubxml" />
+    <None Include="Service References\Correios\CalcPrecoPrazo.disco" />
+    <None Include="Service References\Correios\configuration91.svcinfo" />
+    <None Include="Service References\Correios\configuration.svcinfo" />
+    <Content Include="Service References\Correios\e_commerce.Correios.cResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\Correios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceEndereco\consultacep.disco">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceEndereco\configuration91.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceEndereco\configuration.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceEndereco\e_commerce.ServiceEndereco.Endereco.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceEndereco\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Account\RecuperarSenha.ascx" />
+    <Content Include="Views\Account\RecuperarSenhaConf.ascx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Account\SearchCadastro.aspx" />
+    <Content Include="Views\Carrinho\Finalizar.aspx" />
+    <EntityDeploy Include="Models\Modelvsaslite.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Modelvsaslite.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Imagens\Template\Azul\adicionar.png" />
+    <Content Include="Imagens\Template\Azul\carregando.gif" />
+    <Content Include="Imagens\Template\Azul\carregando_.gif" />
+    <Content Include="Imagens\Template\Azul\continuar.png" />
+    <Content Include="Imagens\Template\Azul\finalizar.png" />
+    <Content Include="Imagens\Template\Azul\prosseguir.png" />
+    <Content Include="Models\Modelvsaslite.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Modelvsaslite.edmx</DependentUpon>
+      <LastGenOutput>Modelvsaslite.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Modelvsaslite.edmx.diagram">
+      <DependentUpon>Modelvsaslite.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Modelvsaslite.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Modelvsaslite.edmx</DependentUpon>
+      <LastGenOutput>Modelvsaslite.cs</LastGenOutput>
+    </Content>
+    <Content Include="Content\bootstrap\js\bootstrap.min.js.map">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Shared\PageMasterAdmin.Master" />
+    <Content Include="Areas\Admin\Views\Shared\PageMasterAdmLog.Master" />
+    <None Include="Properties\PublishProfiles\ecommerce.pubxml" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Imagens\Template\Azul\btn_comprar.png" />
+    <Content Include="Imagens\Template\Azul\carrinho.png" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js.map">
+      <DependentUpon>jquery-1.7.1.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js.map">
+      <DependentUpon>jquery-ui-1.8.20.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.9.2.custom.min.js.map">
+      <DependentUpon>jquery-ui-1.9.2.custom.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.10.1.custom.min.js.map">
+      <DependentUpon>jquery-ui-1.10.1.custom.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js.map">
+      <DependentUpon>jquery.unobtrusive-ajax.js</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.jcarousel.min.js" />
+    <Content Include="Scripts\jquery.pikachoose.full.js" />
+    <Content Include="Scripts\jquery.pikachoose.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Views\Carrinho\Confirmacao.ascx" />
+    <Content Include="Views\Carrinho\FinalizarNoCaixaMsg.aspx" />
+    <Content Include="Views\Carrinho\IndexCarrinho.aspx" />
+    <Content Include="Views\Carrinho\Notificacao.aspx" />
+    <Content Include="Views\Contato\ConfEmail.ascx" />
+    <Content Include="Views\Contato\Index.aspx" />
+    <Content Include="Views\Detalhes\CoresRelacionadas.ascx" />
+    <Content Include="Views\Detalhes\getTamanhos.ascx" />
+    <Content Include="Views\Detalhes\_Index.ascx" />
+    <Content Include="Views\Detalhes\Index.aspx" />
+    <Content Include="Views\Detalhes\IndexBanner.aspx" />
+    <Content Include="Views\Home\Banner.ascx" />
+    <Content Include="Views\Home\Busca.ascx" />
+    <Content Include="Views\Home\getMenuLateral.ascx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\Rodape.ascx" />
+    <Content Include="Views\Pedidos\Details.aspx" />
+    <Content Include="Views\Pedidos\Index.aspx" />
+    <Content Include="Views\ProdutosRelacionados\carregaMenuLateralGeral.ascx" />
+    <Content Include="Views\ProdutosRelacionados\getCategoriaMenuLateral.aspx" />
+    <Content Include="Views\ProdutosRelacionados\IndexProdutosRelacionados.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\layout\Azul\Site_Azul.css" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Scripts\jquery.validate.min.js.map">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </Content>
+    <None Include="Service References\Correios\CalcPrecoPrazo.wsdl" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js.map">
+      <DependentUpon>jquery.validate.unobtrusive.js</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceEndereco\consultacep.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Correios\" />
+    <WCFMetadataStorage Include="Service References\ServiceEndereco\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LIB\Uol.PagSeguro\Uol.PagSeguro.csproj">
+      <Project>{babc5658-6afd-4f8e-81f1-434553663d99}</Project>
+      <Name>Uol.PagSeguro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LIB\VipWebUtils\VipWebUtils\VipWebUtils.csproj">
+      <Project>{8042f20e-20ca-462a-b33c-67873272f491}</Project>
+      <Name>VipWebUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51121</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55231/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

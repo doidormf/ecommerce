@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-commerce", "e-commerce\e-commerce.csproj", "{ABF0BE66-3A3E-4C67-B712-26230318A827}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VipWebUtils", "D:\Projetos Vip-Systems Tecnologia e Inovação\e-commerce\VipWebUtils\VipWebUtils\VipWebUtils.csproj", "{8042F20E-20CA-462A-B33C-67873272F491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uol.PagSeguro", "D:\Projetos Vip-Systems Tecnologia e Inovação\e-commerce\Uol.PagSeguro\Uol.PagSeguro.csproj", "{BABC5658-6AFD-4F8E-81F1-434553663D99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABF0BE66-3A3E-4C67-B712-26230318A827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF0BE66-3A3E-4C67-B712-26230318A827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF0BE66-3A3E-4C67-B712-26230318A827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF0BE66-3A3E-4C67-B712-26230318A827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8042F20E-20CA-462A-B33C-67873272F491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8042F20E-20CA-462A-B33C-67873272F491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8042F20E-20CA-462A-B33C-67873272F491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8042F20E-20CA-462A-B33C-67873272F491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BABC5658-6AFD-4F8E-81F1-434553663D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BABC5658-6AFD-4F8E-81F1-434553663D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BABC5658-6AFD-4F8E-81F1-434553663D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BABC5658-6AFD-4F8E-81F1-434553663D99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

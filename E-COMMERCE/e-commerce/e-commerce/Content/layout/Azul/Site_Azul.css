@@ -1,0 +1,1025 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    /*background-image: url(../../../Imagens/Template/Azul/fundo_.png);*/
+    background-repeat: no-repeat;
+    font-size: .85em;
+    font-family: Calibri, Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5e5e5;
+}
+
+p, ul
+{
+    /*margin-bottom: 10px;*/
+    line-height: 1.6em;
+}
+
+/* HEADINGS
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1
+{
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2
+{
+    padding: 0 0 10px 0;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the
+page width. Or, you can specify an exact pixel width. */
+
+.page
+{
+    width: 960px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header
+{
+    color: #ccc;
+    padding: 0;
+    height: 145px;
+    /*margin-bottom: 5px;*/
+}
+
+    header h1, #header h1
+    {
+        font-weight: bold;
+        padding: 5px 0;
+        margin: 0;
+        color: #fff;
+        border: none;
+        line-height: 2em;
+        font-size: 32px !important;
+        -webkit-text-shadow: 1px 1px 2px #111;
+    }
+
+#section
+{ /*border: 1px solid;
+    border-radius: 5px;
+    border-color:#ccc;*/
+    background-color: #ffffff;
+    /*background-image: url(../../../Imagens/Template/Azul/background_stripes.gif);
+    background-repeat: repeat;*/
+    width: 960px;
+    height: 400px;
+    display: table-cell;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+footer
+{
+    /*border: 1px solid #ccc;
+    color: #fff;*/
+    padding: 10px;
+    text-align: center;
+    line-height: normal;
+    margin: 0 0 30px 0;
+    font-size: .9em;
+    /*width: 100%;*/
+    height: 100%;
+    border-top: solid 2px #3185f6;
+    background-color: #1d60ff;
+    box-shadow: #0a50ae 0px -1px 0px;
+}
+
+fieldset
+{
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend
+{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea
+{
+    min-height: 75px;
+}
+
+input[type="text"],
+input[type="password"]
+{
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+    width: 200px;
+}
+
+select
+{
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+input[type="submit"]
+{
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color: Red;
+}
+
+div#title
+{
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+#logindisplay
+{
+    float: right;
+    font-size: 10px;
+    /*display: block;*/
+    text-align: right;
+    margin: 2px 10px 2px 2px;
+    color: white;
+}
+
+    #logindisplay a:link
+    {
+        color: white;
+        text-decoration: none;
+    }
+
+    #logindisplay a:visited
+    {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #logindisplay a:hover
+    {
+        color: #ccc;
+        text-decoration: none;
+    }
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.editor-label
+{
+    margin: 1em 0 0 0;
+    padding-right: 10px;
+    width: 150px;
+    text-align: right;
+}
+
+.display-field,
+.editor-field
+{
+    margin: 0.5em 0 0 0;
+}
+
+.text-box
+{
+    width: 30em;
+}
+
+    .text-box.multi-line
+    {
+        height: 6.5em;
+    }
+
+.tri-state
+{
+    width: 6em;
+}
+
+#top
+{
+    width: 100%;
+    height: 100%;
+    background-color: #3185f6;
+}
+
+.lateral
+{
+    display: block;
+    max-width: 181px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.lateral #cartdef
+{
+    display: block;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.lateral #return
+{
+    display: block;
+    float: left;
+    width:940px;
+}
+
+.produtolateral
+{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    height: 240px;
+    width: 170px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+#temp
+{
+    display: table-cell;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    min-height: 300px;
+    min-width: 770px;
+    text-align: center;
+    padding-top: 200px;
+    font-size: 20px;
+    float: right;
+}
+
+#conteudo
+{
+    display: table-cell;
+    margin-bottom: 15px;
+    width: 760px;
+    float: right;
+}
+
+.fil
+{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    height: 25px;
+    font-size: 12px;
+}
+/*************pagina home********************/
+.lancamentos
+{
+    
+    padding: 10px 5px 10px 0px;
+    margin-bottom: 5px;
+    
+    float: left;
+    width: 775px;
+    height: 100%;
+}
+
+.produto
+{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    width: 172px;
+    height: auto;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 6px 10px 0px;
+    text-align: center;
+    float: left;
+    background-color: transparent;
+
+}
+
+#produtodescricao
+{
+    width: 172px;
+    height: 40px;
+    text-align: center;
+}
+
+#linha_separadora
+{
+    border-bottom: solid 1px #efefef;
+    width: 753px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.produto:hover
+{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #8ec6ff;
+    width: 172px;
+    height: auto;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 6px 10px 0px;
+    text-align: center;
+    float: left;
+    background-color: #fff;
+    box-shadow: #3185f6 1px 1px 2px;
+}
+
+span.preco
+{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: #111;
+}
+
+span.parcela
+{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #3185f6;
+}
+
+span.labelcarrinho
+{
+    color: #000;
+}
+
+.precocarrinho
+{
+    /*border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;*/
+    margin-top: 37px;
+    margin-left: 183px;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+}
+
+span.descricao
+{
+    /*font-family: Cambria;*/
+    line-height: 0px;
+    font-size: 12px;
+    text-align: center;
+    color: #0e2441;
+}
+
+#lateraldireita
+{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    width: 130px;
+    height: 100%;
+    padding: 5px 5px 5px 5px;
+    margin: 0px 0px 10px 20px;
+    text-align: center;
+    float: right;
+}
+
+.superiordireita
+{
+    /*border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;*/
+    color: #fff;
+    margin-right: 20px;
+    /*display: table-cell;*/
+    /*padding-left: 80px;*/
+    padding-top: 30px;
+    /*width: 100%;*/
+    /*height: 85px;*/
+    float: right;
+    background-repeat: no-repeat;
+}
+
+.carrinhoTop
+{
+    width: 146px;
+    height: 38px;
+    background-image: url("../../../Imagens/Template/Azul/carrinho.png");
+}
+
+    .carrinhoTop:hover
+    {
+        cursor: pointer;
+    }
+
+.labelquant
+{
+    float: right;
+    width: 31px;
+    height: 20px;
+    text-align: center;
+    margin-top: 9px;
+    margin-right: 11px;
+    /*border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;*/
+}
+
+    .labelquant:hover
+    {
+        cursor: pointer;
+    }
+
+#superior
+{
+    display: table-cell;
+    width: 100%;
+    height: 25px;
+    color: #fff;
+    float: left;
+    background-color: #0e2441;
+}
+
+#centro
+{
+    display: table-cell;
+    width: 386px;
+    height: 95px;
+    color: #1d60ff;
+    float: left;
+}
+
+#logotipo
+{
+    display: table-cell;
+    width: 318px;
+    height: 95px;
+    color: #1d60ff;
+    float: left;
+    margin-top:15px;
+}
+
+#legenda
+{
+    text-align: left;
+    font-size: 20px;
+    color: #5c87b2;
+}
+
+.menulateral
+{
+    width: 181px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.detalheproduto
+{
+    width: 300px;
+    height: 300px;
+    float: left;
+     margin-top:20px;
+    margin-bottom: 5px;
+    clear: both;
+    overflow: hidden;
+}
+
+.detalheproduto_home
+{
+    vertical-align: middle;
+    width: 160px;
+    height: 172px;
+    margin-left: 5px;
+    float: left;
+    margin-bottom: 10px;
+    clear: both;
+    overflow: hidden;
+    background-color: transparent;
+    /*border: 1px solid #ccc;*/
+}
+
+    .detalheproduto_home:hover
+    {
+        cursor: pointer;
+    }
+
+#CarregandoInformacoesSolicitadas
+{
+    vertical-align: middle;
+    background-image: url(../../../Imagens/Template/Azul/carregando_.gif);
+    background-repeat: no-repeat;
+    /*z-index: 7;*/
+    position: absolute;
+}
+
+    #CarregandoInformacoesSolicitadas img
+    {
+        /*margin: 10px 12px;*/
+    }
+
+.descricaodetalheproduto
+{
+    width: 452px;
+    float: right;
+     margin-top:20px;
+    margin-bottom: 5px;
+}
+
+.descricaodetalheprodutoTop
+{
+    width: 452px;
+    float: right;
+}
+
+#coresDetalheProduto
+{
+    width: 250px;
+    display: table-cell;
+}
+
+#coresDetalheProduto>span
+{
+   font-weight:bold;
+}
+#coresTamanhos
+{
+    width: 252px;
+    float: left;
+}
+
+
+.outrosDetalheProdutoDireita
+{
+    width: 195px;
+    height: 100px;
+    float: right;
+}
+
+#tamanhoDetalheProduto
+{
+    width: 250px;
+    float: left;
+}
+
+#tamanhoDetalheProduto>span
+{
+   font-weight:bold;
+}
+
+.btncompra
+{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #ffffff;
+    display: inline-block;
+    *border-left: 0 none #e6e6e6;
+    background-repeat: no-repeat;
+    zoom: 1;
+    float: right;
+     margin-right:15px;
+}
+
+    .btncompra:hover
+    {
+        border: 1px solid;
+        border-radius: 5px;
+        border-color: #fb0808;
+    }
+
+.maisdetalhes
+{
+    width: 767px;
+    height: 270px;
+    float: left;
+    margin-bottom: 2px;
+}
+
+.descricaodetalheproduto, .formatacaoP, .formatacao
+{
+    color: #3185f6;
+}
+
+.formatacao
+{
+    color: #5c87b2;
+}
+
+.botaocarrinho
+{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    width: 146px;
+    height: 38px;
+   
+}
+
+.detalhecarrinho
+{
+    margin-top: 5px;
+    width: 950px;
+    max-width: 950px;
+    height: 100%;
+    display: table;
+    /*-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;*/
+}
+
+.fotoprodcarrinho
+{
+    width: 100px;
+    height: 100px;
+    /*display: table-cell;*/
+}
+
+#decricarrinho
+{
+    /*width: 100px;*/
+    /*height: 100px;*/
+    display: table;
+}
+
+.textocarrinho
+{
+    padding-left: 20px;
+    width: 435px;
+    height: 100px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.precototal
+{
+    margin-top: 10px;
+    vertical-align: central;
+    width: 950px;
+    height: 31px;
+}
+
+#conteudopercototal
+{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    text-align: center;
+    vertical-align: middle;
+    width: 240px;
+    height: 30px;
+    float: right;
+    background-color: #0e2441;
+    padding-top: 5px;
+}
+
+#btnvoltar
+{
+    width: 138px;
+    height: 15px;
+    float: left;
+}
+
+#conteudopercototal > strong
+{
+    color: #fff;
+    font-size: 20px;
+}
+
+.prosseguir
+{
+    /*border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;*/
+    width: 950px;
+    height: 57px;
+}
+
+#btnprosseguir
+{
+    /*border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;*/
+    width: 138px;
+    float: right;
+}
+
+#btnpagseguro
+{
+    /*border: 1px solid;
+    border-radius: 5px;
+    border-color: #ccc;*/
+    /*width: 138px;*/
+    margin-top: 4px;
+    /*margin-right:10px;*/
+    float: right;
+}
+
+.cor
+{
+    width: 35px;
+    height: 35px;
+    display: table;
+    margin: 10px 8px 10px 0;
+    border-radius: 8px;
+   
+    border:1px solid #ccc;
+}
+    .cor:hover
+    {
+        cursor:pointer;
+    }
+
+.tamanho
+{
+    width: 35px;
+    height: 35px;
+    border: solid 1px;
+    border-color: #ddd;
+    float: left;
+    /*padding: 6px;*/
+     border-radius: 5px;
+    margin: 10px 8px 10px 0;
+    /*vertical-align:central;*/
+    line-height:35px;
+    text-align:center;
+ 
+}
+.tamanho:hover
+    {
+        cursor: pointer;
+        background-color: #7e7979;
+    }
+
+#titulocarrinho
+{
+    width: 100%;
+    height: 25px;
+    border: solid 1px;
+    border-color: #ddd;
+    float: left;
+    padding-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#itensremovecart
+{
+    width: 100%;
+    border: solid 1px #fbeed5;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    background-color: #fcf8e3;
+}
+
+#titulocarrinhoremove
+{
+    width: 100%;
+    height: 25px;
+    border-bottom: solid 1px #fbeed5;
+    float: left;
+    padding-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #c09853;
+}
+
+#conteudoremove
+{
+    width: 100%;
+    float: left;
+    padding-top: 5px;
+    margin-right: 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 15px;
+    color: #c09853;
+}
+
+.tamanho:hover
+{
+    background-color: #5c87b2;
+}
+
+#login
+{
+    width: 500px;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow: 0px 0px 25px #888888;
+}
+
+#retorno
+{
+    /*border: solid 1px;
+    border-color: #ddd;*/
+    /*width: 100%;*/
+    padding: 5px 10px 5px 5px;
+    font-size: 20px;
+    /*height: 300px;*/
+    margin-bottom: 10px;
+    margin-top: 20px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.menu_superior
+{
+    /*border: solid 1px;
+    border-color: #0e2441;*/
+    background-color: #0e2441;
+    width: 100%;
+    font-size: 16px;
+    height: 50px;
+}
+
+#bannerpagseguro
+{
+    /*border: solid 1px;
+    border-color: #ddd;*/
+    /*width: 100%;*/
+    color: #fff;
+    display: block;
+    margin-right: 1%;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+}
+
+#infoempresa
+{
+    color: #fff;
+    font-size: 9px;
+    width: 100%;
+    text-align: center;
+    /*border:1px solid #ccc;*/
+    margin-top: 20px;
+    border-top: solid 1px #3185f6;
+    background-color: #1d60ff;
+    box-shadow: #0a50ae 0px -1px 0px;
+    padding-top: 15px;
+}
+
+.infoRodape
+{
+    display: table;
+    margin-left: 20px;
+    color: #fff;
+}
+
+#imgphone
+{
+    background-repeat: no-repeat;
+    /*border: 1px solid #ccc;*/
+    display: table-cell;
+    float: left;
+    width: 165px;
+    height: 28px;
+    text-align: center;
+    background-color: #3185f6;
+    padding: 10px;
+    font-size: 12px;
+    border: solid 1px #124aff;
+    border-radius: 3px;
+    box-shadow: #8ec6ff 0px 0px 1px 0px;
+    margin-right: 4px;
+}
+
+.img
+{
+    /*border: 1px solid #ccc;*/
+    width: 50px;
+    height: 30px;
+    float: left;
+}
+
+div#contato
+{
+    /*border: 1px solid #ccc;*/
+    font-size: 12px;
+    vertical-align: middle;
+    display: table;
+    float: left;
+    width: 165px;
+    height: 28px;
+    padding: 9px;
+    text-align: center;
+    background-color: #3185f6;
+    border: solid 1px #124aff;
+    border-radius: 3px;
+    box-shadow: #8ec6ff 0px 0px 1px 0px;
+    margin-right: 4px;
+    /*line-height:25px;*/
+    /*text-align:center;*/
+}
+
+    div#contato:hover
+    {
+        /*border: 1px solid #ccc;*/
+        font-size: 12px;
+        vertical-align: middle;
+        display: table;
+        float: left;
+        width: 165px;
+        height: 28px;
+        padding: 9px;
+        text-align: center;
+        background-color: #1974ee;
+        border: solid 1px #1e5fb6;
+        border-radius: 3px;
+        box-shadow: #8ec6ff 0px 0px 1px 0px;
+        margin-right: 4px;
+        cursor: pointer;
+        /*line-height:25px;*/
+        /*text-align:center;*/
+    }
+
+
+.separador
+{
+    display: block;
+    width: 8px;
+    height: 35px;
+    /*background-color:#fff;*/
+}
+
+.superiorrodape
+{
+    /*border:1px solid #ccc;*/
+    width: 100%;
+    display: table;
+    /*width:1000px;*/
+    /*background-color:#444;*/
+}

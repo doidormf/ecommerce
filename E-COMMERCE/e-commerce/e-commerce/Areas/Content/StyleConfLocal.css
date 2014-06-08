@@ -1,0 +1,39 @@
+﻿
+
+.formredefilial
+{
+    border: 1px solid #ccc;
+    /*/ width:350px;*/
+    float: left;
+    margin-left: 35%;
+    padding: 15px 20px 0 20px;
+    margin-top: 5%;
+    border-radius:10px;
+      /*box-shadow: 0px 0px 25px #888888;*/
+}
+
+    .formredefilial #botao
+    {
+      
+        float:right;
+    }
+
+.topredefilial
+{
+    /*border: 1px solid #ccc;*/
+    padding: 5px;
+    text-align: center;
+}
+
+.rodape
+{
+  
+    border: solid 1px #fbeed5;
+    background-color: #fcf8e3;
+    font-size: 12px;
+    margin-top: 40px;
+    padding: 5px 5px 0 5px;
+    text-align: center;
+    color: #c09853;
+  
+}
